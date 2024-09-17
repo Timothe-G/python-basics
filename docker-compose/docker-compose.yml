@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: ./app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - redis-container
+
+  redis-container:
+    image: redis
