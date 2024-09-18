@@ -19,10 +19,13 @@ jobs:
         with:
           python-version: '3.7'
 
+      - name: Change directory
+        run: cd ./github/workflows
+
       - name: Install Backend Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./.github/workflows/requirements.txt
+          pip install -r ./requirements.txt
 
       - name: Start Backend Server
-        run: uvicorn github.workflows.main:app --reload &
+        run: uvicorn main:app --reload &
