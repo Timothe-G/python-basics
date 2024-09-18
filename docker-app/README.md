@@ -3,7 +3,7 @@
 This app contains 2 files :
 - Dockerfile
 - app/main.py
-
+<br></br>
 ### Dockerfile
 The Dockerfile contains all data to build an image for docker.
 > The first line specifies which base image we need to use. In this example, we are using a container with python, and some modules already installed (uvicorn, gunicorn and fastapi).
