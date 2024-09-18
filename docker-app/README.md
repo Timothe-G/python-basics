@@ -30,4 +30,4 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 <br></br>
 ## app/main.py
-This is the python script.
+This is the python script. It using the FastAPI module. In this script, we would like to get a message when user is connecting to the "/" directory. In the example of a website, it will show the message **Bienvenue dans mon monde** on http://localhost/
