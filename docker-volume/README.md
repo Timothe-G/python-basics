@@ -1,5 +1,8 @@
 # docker-volume
-
+The goal of this app is to use docker volumes. With this functionnality, if we made a modification on the python script, it will not be necessary to rebuild the docker image. For this, we will use this command to run a container :
+```dockerfile
+docker run -d --name docker-volume-test -p 8000:80 -v $(pwd):/app docker-volume-image
+```
 This app contains 3 files :
 - Dockerfile
 - app.py
