@@ -10,8 +10,7 @@ The Dockerfile contains all data to build an image for docker.
 ```dockerfile
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
 ```
-
-
+<br></br>
 > The second line specifies that we will copy all files in ./app in the folder /app in the container.
 ```dockerfile
 COPY ./app /app
