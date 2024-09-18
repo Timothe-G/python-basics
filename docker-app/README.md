@@ -20,7 +20,7 @@ COPY ./app /app
 ```dockerfile
 EXPOSE 80
 ```
-<&nbsp;
+&nbsp;
 > The last line is the command that will execute the python script when the container will be up. In our case, we will execute the command **uvicorn** with some options
 > - main:app is the name of the file
 > - host 0.0.0.0 will be used
