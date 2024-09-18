@@ -20,9 +20,9 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
 WORKDIR /
 ```
 <br></br>
-> The thirst line specifies that we will copy all files in ./app in the folder /app in the container.
+> The thirst line specifies that we will copy all files in the current folder in the root folder in the container.
 ```dockerfile
-COPY ./app /app
+COPY ./ /
 ```
 <br></br>
 > The fourth line is a command that we would like to execute in the container. The goal of this command is to add requirements of our script. In this example this is not necessary because we are already using a base image that contains all required modules for our script.
