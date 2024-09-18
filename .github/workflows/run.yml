@@ -25,4 +25,4 @@ jobs:
           pip install -r ./.github/workflows/requirements.txt
 
       - name: Start Backend Server
-        run: uvicorn ./.github.workflows/main:app --reload &
+        run: uvicorn github.workflows.main:app --reload &
