@@ -15,12 +15,12 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
 ```dockerfile
 COPY ./app /app
 ```
-
+<br></br>
 > The third line specifies that we will listen on port 80 for TCP connections.
 ```dockerfile
 EXPOSE 80
 ```
-
+<br></br>
 > The last line is the command that will execute the python script when the container will be up. In our case, we will execute the command **uvicorn** with some options
 > - main:app is the name of the file
 > - host 0.0.0.0 will be used
@@ -28,4 +28,6 @@ EXPOSE 80
 ```dockerfile
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
-
+<br></br>
+### app/main.py
+This is the python script.
