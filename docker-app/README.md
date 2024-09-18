@@ -1,1 +1,30 @@
+# docker-app
 
+This app contains 2 files :
+- Dockerfile
+- app/main.py
+
+
+The file Dockerfile contains all data to build an image for docker.
+> The first line specifies which base image we need to use. In this example, we are using a container with python, and some modules already installed (uvicorn, gunicorn and fastapi).
+```dockerfile
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
+```
+
+> The second line specifies that we will copy all files in ./app in the folder /app in the container.
+```dockerfile
+COPY ./app /app
+```
+
+> The third line specifies that we will listen on port 80 for TCP connections.
+```dockerfile
+EXPOSE 80
+```
+
+> The last line is the command that will execute the python script when the container will be up. In our case, we will execute the command **uvicorn** with some options
+> - main:app is the name of the file
+> - host 0.0.0.0 will be used
+> - port 80 will be used
+```dockerfile
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+```
