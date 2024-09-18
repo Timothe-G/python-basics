@@ -4,7 +4,7 @@ This app contains 2 files :
 - Dockerfile
 - app/main.py
 <br></br>
-### Dockerfile
+## Dockerfile
 The Dockerfile contains all data to build an image for docker.
 > The first line specifies which base image we need to use. In this example, we are using a container with python, and some modules already installed (uvicorn, gunicorn and fastapi).
 ```dockerfile
@@ -29,5 +29,5 @@ EXPOSE 80
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 <br></br>
-### app/main.py
+## app/main.py
 This is the python script.
