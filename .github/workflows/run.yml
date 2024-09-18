@@ -20,7 +20,7 @@ jobs:
           python-version: '3.7'
 
       - name: Change directory
-        run: cd ./github/workflows
+        run: cd ./.github/workflows
 
       - name: Install Backend Dependencies
         run: |
