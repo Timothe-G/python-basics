@@ -1,4 +1,4 @@
-name: FastAPI run
+name: FastAPI test
 
 on:
   push:
@@ -28,3 +28,10 @@ jobs:
         run: |
           cd ./test_app
           uvicorn main:app --reload &
+
+      #add some test
+      - name: Test with pytest
+        run: |
+          pip install pytest pytest-cov
+          cd ./test_app
+          pytest
